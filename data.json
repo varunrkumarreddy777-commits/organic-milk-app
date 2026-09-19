@@ -1,0 +1,391 @@
+{
+  "users": [
+    {
+      "id": "u_admin",
+      "name": "Organic Milk Admin (Owner)",
+      "email": "admin@organicmilk.com",
+      "phone": "9876543210",
+      "password": "admin123",
+      "address": "Central Dairy Hub, Plot 14, Main Road",
+      "distance_km": 0,
+      "role": "admin",
+      "status": "active",
+      "last_active_date": "2026-09-18",
+      "created_at": "2026-01-01"
+    },
+    {
+      "id": "u_ramesh",
+      "name": "Ramesh Sharma",
+      "email": "ramesh@example.com",
+      "phone": "9812345678",
+      "password": "user123",
+      "address": "Flat 302, Sunrise Heights, Sector 4",
+      "distance_km": 2.3,
+      "role": "customer",
+      "status": "active",
+      "last_active_date": "2026-09-18",
+      "created_at": "2026-08-01"
+    },
+    {
+      "id": "u_priya",
+      "name": "Priya Patel",
+      "email": "priya@example.com",
+      "phone": "9823456789",
+      "password": "user123",
+      "address": "Villa 12, Green Acres, Phase 2",
+      "distance_km": 1.1,
+      "role": "customer",
+      "status": "active",
+      "last_active_date": "2026-09-18",
+      "created_at": "2026-08-10"
+    },
+    {
+      "id": "u_anita",
+      "name": "Anita Rao",
+      "email": "anita@example.com",
+      "phone": "9834567890",
+      "password": "user123",
+      "address": "House 45, Royal Enclave",
+      "distance_km": 0.8,
+      "role": "customer",
+      "status": "active",
+      "last_active_date": "2026-09-18",
+      "created_at": "2026-08-15"
+    },
+    {
+      "id": "u_vikram",
+      "name": "Vikram Singh (Inactive Example)",
+      "email": "vikram@example.com",
+      "phone": "9845678901",
+      "password": "user123",
+      "address": "Plot 89, Palm Grove Colony",
+      "distance_km": 4.5,
+      "role": "customer",
+      "status": "inactive_removed",
+      "last_active_date": "2026-06-10",
+      "created_at": "2026-04-01"
+    },
+    {
+      "id": "u_admin_1789821788",
+      "name": "Varun kumar reddy",
+      "email": "varunkumarreddy495@gmail.com",
+      "phone": "09014186164",
+      "password": "varunreddy777",
+      "address": "sathya sai",
+      "distance_km": 1.0,
+      "gps_lat": null,
+      "gps_lng": null,
+      "role": "admin",
+      "status": "active",
+      "last_active_date": "2026-09-19",
+      "created_at": "2026-09-19"
+    }
+  ],
+  "products": [
+    {
+      "id": "p_cow",
+      "name": "Organic Pure Cow Milk",
+      "price_per_liter": 55.0,
+      "unit": "Liter",
+      "description": "100% pure, farm-fresh A2 cow milk, pasteurized & unadulterated."
+    },
+    {
+      "id": "p_buffalo",
+      "name": "Organic Rich Buffalo Milk",
+      "price_per_liter": 80.0,
+      "unit": "Liter",
+      "description": "High-cream rich buffalo milk, perfect for tea, coffee, and curd."
+    },
+    {
+      "id": "p_toned",
+      "name": "Organic Toned Milk",
+      "price_per_liter": 50.0,
+      "unit": "Liter",
+      "description": "Low-fat nutritious organic milk for healthy living."
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": "sub_ramesh",
+      "user_id": "u_ramesh",
+      "product_id": "p_cow",
+      "schedule": "both",
+      "morning_qty": 1.0,
+      "evening_qty": 1.0,
+      "status": "active"
+    },
+    {
+      "id": "sub_priya",
+      "user_id": "u_priya",
+      "product_id": "p_cow",
+      "schedule": "morning_only",
+      "morning_qty": 1.5,
+      "evening_qty": 0,
+      "status": "active"
+    },
+    {
+      "id": "sub_anita",
+      "user_id": "u_anita",
+      "product_id": "p_buffalo",
+      "schedule": "evening_only",
+      "morning_qty": 0,
+      "evening_qty": 1.0,
+      "status": "active"
+    },
+    {
+      "id": "sub_vikram",
+      "user_id": "u_vikram",
+      "product_id": "p_toned",
+      "schedule": "morning_only",
+      "morning_qty": 2.0,
+      "evening_qty": 0,
+      "status": "inactive"
+    }
+  ],
+  "cancelled_dates": [
+    {
+      "id": "c_1",
+      "user_id": "u_ramesh",
+      "cancel_date": "2026-09-20",
+      "shift": "both",
+      "reason": "Out of town for weekend",
+      "created_at": "2026-09-18T10:00:00Z"
+    },
+    {
+      "id": "c_2",
+      "user_id": "u_priya",
+      "cancel_date": "2026-09-22",
+      "shift": "morning",
+      "reason": "Fasting day",
+      "created_at": "2026-09-18T14:30:00Z"
+    }
+  ],
+  "daily_availability": [
+    {
+      "date": "2026-09-18",
+      "available_liters": 300,
+      "notes": "Fresh morning batch delivered from dairy farm"
+    },
+    {
+      "date": "2026-09-19",
+      "available_liters": 150.0,
+      "notes": "no extra stock"
+    }
+  ],
+  "payments": [
+    {
+      "id": "pay_101",
+      "user_id": "u_ramesh",
+      "month_year": "August 2026",
+      "milk_cost": 3840,
+      "delivery_cost": 900,
+      "total_amount": 4740,
+      "payment_method": "online",
+      "payment_status": "paid",
+      "receipt_number": "OM-202608-8812",
+      "paid_at": "2026-09-02T11:20:00Z"
+    },
+    {
+      "id": "pay_102",
+      "user_id": "u_priya",
+      "month_year": "August 2026",
+      "milk_cost": 2880,
+      "delivery_cost": 600,
+      "total_amount": 3480,
+      "payment_method": "offline",
+      "payment_status": "paid",
+      "receipt_number": "OM-202608-8813",
+      "paid_at": "2026-09-04T16:00:00Z"
+    },
+    {
+      "id": "pay_103",
+      "user_id": "u_anita",
+      "month_year": "September 2026",
+      "milk_cost": 2220,
+      "delivery_cost": 300,
+      "total_amount": 2520,
+      "payment_method": "online",
+      "payment_status": "pending",
+      "receipt_number": "OM-202609-9041",
+      "paid_at": null
+    }
+  ],
+  "notifications": [
+    {
+      "id": "n_1789821840",
+      "title": "Product Price Updated",
+      "message": "Organic Toned Milk price changed from \u20b951.0 to \u20b950.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:14:00.719338"
+    },
+    {
+      "id": "n_1789821840",
+      "title": "Product Price Updated",
+      "message": "Organic Toned Milk price changed from \u20b952.0 to \u20b951.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:14:00.501573"
+    },
+    {
+      "id": "n_1789821840",
+      "title": "Product Price Updated",
+      "message": "Organic Toned Milk price changed from \u20b953.0 to \u20b952.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:14:00.382691"
+    },
+    {
+      "id": "n_1789821840",
+      "title": "Product Price Updated",
+      "message": "Organic Toned Milk price changed from \u20b954 to \u20b953.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:14:00.247196"
+    },
+    {
+      "id": "n_1789821829",
+      "title": "Product Price Updated",
+      "message": "Organic Rich Buffalo Milk price changed from \u20b979.0 to \u20b980.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:49.924256"
+    },
+    {
+      "id": "n_1789821829",
+      "title": "Product Price Updated",
+      "message": "Organic Rich Buffalo Milk price changed from \u20b978.0 to \u20b979.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:49.396818"
+    },
+    {
+      "id": "n_1789821829",
+      "title": "Product Price Updated",
+      "message": "Organic Rich Buffalo Milk price changed from \u20b977.0 to \u20b978.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:49.184624"
+    },
+    {
+      "id": "n_1789821829",
+      "title": "Product Price Updated",
+      "message": "Organic Rich Buffalo Milk price changed from \u20b976.0 to \u20b977.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:49.042929"
+    },
+    {
+      "id": "n_1789821828",
+      "title": "Product Price Updated",
+      "message": "Organic Rich Buffalo Milk price changed from \u20b975.0 to \u20b976.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:48.406247"
+    },
+    {
+      "id": "n_1789821827",
+      "title": "Product Price Updated",
+      "message": "Organic Rich Buffalo Milk price changed from \u20b974 to \u20b975.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:47.720174"
+    },
+    {
+      "id": "n_1789821823",
+      "title": "Product Price Updated",
+      "message": "Organic Pure Cow Milk price changed from \u20b956.0 to \u20b955.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:43.942166"
+    },
+    {
+      "id": "n_1789821823",
+      "title": "Product Price Updated",
+      "message": "Organic Pure Cow Milk price changed from \u20b957.0 to \u20b956.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:43.435593"
+    },
+    {
+      "id": "n_1789821821",
+      "title": "Product Price Updated",
+      "message": "Organic Pure Cow Milk price changed from \u20b958.0 to \u20b957.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:41.408547"
+    },
+    {
+      "id": "n_1789821821",
+      "title": "Product Price Updated",
+      "message": "Organic Pure Cow Milk price changed from \u20b959.0 to \u20b958.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:41.197390"
+    },
+    {
+      "id": "n_1789821821",
+      "title": "Product Price Updated",
+      "message": "Organic Pure Cow Milk price changed from \u20b960.0 to \u20b959.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:41.049684"
+    },
+    {
+      "id": "n_1789821820",
+      "title": "Product Price Updated",
+      "message": "Organic Pure Cow Milk price changed from \u20b961.0 to \u20b960.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:40.908546"
+    },
+    {
+      "id": "n_1789821820",
+      "title": "Product Price Updated",
+      "message": "Organic Pure Cow Milk price changed from \u20b962.0 to \u20b961.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:40.762553"
+    },
+    {
+      "id": "n_1789821820",
+      "title": "Product Price Updated",
+      "message": "Organic Pure Cow Milk price changed from \u20b963.0 to \u20b962.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:40.589917"
+    },
+    {
+      "id": "n_1789821820",
+      "title": "Product Price Updated",
+      "message": "Organic Pure Cow Milk price changed from \u20b964 to \u20b963.0/Liter.",
+      "type": "price_update",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:40.387810"
+    },
+    {
+      "id": "n_1789821788",
+      "title": "New Admin Registered!",
+      "message": "Varun kumar reddy registered as ADMIN (sathya sai).",
+      "type": "signup",
+      "is_read": false,
+      "created_at": "2026-09-19T18:13:08.388415"
+    },
+    {
+      "id": "n_1",
+      "title": "New Skip Date Submitted",
+      "message": "Ramesh Sharma cancelled delivery for 2026-09-20 (Both shifts).",
+      "type": "skip_date",
+      "is_read": false,
+      "created_at": "2026-09-18T10:00:00Z"
+    },
+    {
+      "id": "n_2",
+      "title": "Online Payment Received",
+      "message": "Ramesh Sharma paid \u20b94,740 for August 2026 bill via Online UPI.",
+      "type": "payment",
+      "is_read": true,
+      "created_at": "2026-09-02T11:20:00Z"
+    }
+  ]
+}
